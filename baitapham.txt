@@ -1,0 +1,38 @@
+package com.example.myapplication
+import java.util.Scanner
+val n=nguyenbaophuc
+val ma=2415053122130
+fun sayHello(name: String) {
+    println("Xin chao, $name!")
+}
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun calculateAverage(a: Double, b: Double): Double {
+    return (a + b) / 2.0
+}
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+
+    // 1. Goi fun sayHello
+    print("Nhap ten: ")
+    val inputName = scanner.nextLine()
+    sayHello(inputName)
+    // 2. Goi fun add
+    print("Nhap so nguyen a: ")
+    val num1 = scanner.nextInt()
+    print("Nhap so nguyen b: ")
+    val num2 = scanner.nextInt()
+    val sum = add(num1, num2)
+    println("Tong cua $num1 va $num2 la: $sum")
+    println("-------------------")
+    // 3. Goi fun calculateAverage
+    print("Nhap so thuc x: ")
+    val d1 = scanner.nextDouble()
+    print("Nhap so thuc y: ")
+    val d2 = scanner.nextDouble()
+    val avg = calculateAverage(d1, d2)
+    println("Trung binh cong cua $d1 va $d2 la: %.2f".format(avg))
+}
